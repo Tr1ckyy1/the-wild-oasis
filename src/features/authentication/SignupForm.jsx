@@ -38,8 +38,10 @@ function SignupForm() {
           disabled={isLoading}
           {...register("email", {
             required: "This field is required",
-            pattern: { value: /\S+@\S+\.\S+/ },
-            message: "Please provide a valid email address",
+            pattern: {
+              value: /\S+@\S+\.\S+/,
+              message: "Please provide a valid email address",
+            },
           })}
         />
       </FormRow>
